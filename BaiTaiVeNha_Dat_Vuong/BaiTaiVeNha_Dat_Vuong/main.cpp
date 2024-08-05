@@ -1,7 +1,9 @@
 #include "BaiTap.h"
 
 void main() {
-	chuong3_bai10();
+	chuong2_8_1();
+	
+	//chuong3_bai10();
 	//chuong3_bai9();
 	//chuong3_bai8();
 
