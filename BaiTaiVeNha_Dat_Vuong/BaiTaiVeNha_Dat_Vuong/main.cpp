@@ -2,7 +2,9 @@
 
 void main() {
 
-	chuong3_bai6();
+	chuong3_bai7();
+
+	//chuong3_bai6();
 
 	//chuong3_bai5();
 

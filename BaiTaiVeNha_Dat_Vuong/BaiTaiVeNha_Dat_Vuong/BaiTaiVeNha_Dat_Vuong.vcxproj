@@ -132,6 +132,7 @@
     <ClCompile Include="chuong3_bai4.cpp" />
     <ClCompile Include="chuong3_bai5.cpp" />
     <ClCompile Include="chuong3_bai6.cpp" />
+    <ClCompile Include="chuong3_bai7.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
