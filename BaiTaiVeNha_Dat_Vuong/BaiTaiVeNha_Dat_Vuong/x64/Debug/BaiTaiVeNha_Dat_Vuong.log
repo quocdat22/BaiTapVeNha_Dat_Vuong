@@ -1,2 +1,3 @@
-﻿  chuong3_bai2.cpp
+﻿  chuong3_bai3.cpp
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\chuong3_bai3.cpp(8,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   BaiTaiVeNha_Dat_Vuong.vcxproj -> C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\x64\Debug\BaiTaiVeNha_Dat_Vuong.exe
