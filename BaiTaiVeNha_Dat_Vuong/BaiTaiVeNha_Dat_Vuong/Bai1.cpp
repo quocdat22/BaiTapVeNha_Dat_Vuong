@@ -96,6 +96,40 @@ PhanSo tichPhanSo(PhanSo ds[], int n) {
 	return tich;
 }
 
+//Xuất ra nghịch đảo giá trị các phân số trong mảng
+void nghichDaoPhanSo(PhanSo ds[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("Nghịch đảo phân số thứ %d: %d/%d\n", i + 1, ds[i].mau, ds[i].tu);
+	}
+}
+
+//sap xep tang dan theo thuat toan INTERCHANGE SORT
+
+void interchangeSortTang(PhanSo ds[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (soSanhPhanSo(ds[i], ds[j]) > 0) {
+				PhanSo temp = ds[i];
+				ds[i] = ds[j];
+				ds[j] = temp;
+			}
+		}
+	}
+}
+//sap xep giam dan theo thuat toan INTERCHANGE SORT
+void interchangeSortGiam(PhanSo ds[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (soSanhPhanSo(ds[i], ds[j]) < 0) {
+				PhanSo temp = ds[i];
+				ds[i] = ds[j];
+				ds[j] = temp;
+			}
+		}
+	}
+}
+
+
 
 void chuong2_8_1() {
     PhanSo ds[MAX_SIZE];
@@ -116,14 +150,26 @@ void chuong2_8_1() {
     //PhanSo min = timPhanSoNhoNhat(ds, n);
     //printf("\nPhân số nhỏ nhất: %d/%d\n", min.tu, min.mau);
 
-    // Tính tổng các phân số
-    PhanSo sum = tongPhanSo(ds, n);
-    printf("\nTổng các phân số: %d/%d\n", sum.tu, sum.mau);
+    //// Tính tổng các phân số
+    //PhanSo sum = tongPhanSo(ds, n);
+    //printf("\nTổng các phân số: %d/%d\n", sum.tu, sum.mau);
 
-    // Tính tích các phân số
-    PhanSo tich = tichPhanSo(ds, n);
-    printf("\nTích các phân số: %d/%d\n", tich.tu, tich.mau);
+    //// Tính tích các phân số
+    //PhanSo tich = tichPhanSo(ds, n);
+    //printf("\nTích các phân số: %d/%d\n", tich.tu, tich.mau);
 
+    // Xuất ra nghịch đảo giá trị các phân số trong mảng
+    //nghichDaoPhanSo(ds, n);
+
+    //sap xep tang dan theo thuat toan INTERCHANGE SORT
+    interchangeSortTang(ds, n);
+    printf("\nDanh sách các phân số sau khi sắp xếp tăng dần:\n");
+    inDanhSachPhanSo(ds, n);
+
+    //sap xep giam dan theo thuat toan INTERCHANGE SORT
+    interchangeSortGiam(ds, n);
+    printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
+    inDanhSachPhanSo(ds, n);
 
 
     return;
