@@ -24,6 +24,7 @@ int isValidName(const char* name) {
     return wordCount >= 2;
 }
 
+
 // Hàm in tên của người
 void printFirstName(const char* fullName) {
     if (!isValidName(fullName)) {
@@ -61,7 +62,10 @@ void chuong3_bai5() {
         fullName[len - 1] = '\0';
     }
 
+
     printFirstName(fullName);
+
+
 
 	return;
 }
