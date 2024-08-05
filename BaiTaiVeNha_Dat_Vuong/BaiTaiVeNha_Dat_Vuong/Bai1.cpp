@@ -129,6 +129,40 @@ void interchangeSortGiam(PhanSo ds[], int n) {
 	}
 }
 
+//sap xep giam dan theo thuat toan Selection Sort
+void selectionSortGiam(PhanSo ds[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int max = i;
+		for (int j = i + 1; j < n; j++) {
+			if (soSanhPhanSo(ds[j], ds[max]) > 0) {
+				max = j;
+			}
+		}
+		if (max != i) {
+			PhanSo temp = ds[i];
+			ds[i] = ds[max];
+			ds[max] = temp;
+		}
+	}
+}
+
+//sap xep tang dan theo thuat toan Selection Sort
+void selectionSortTang(PhanSo ds[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int min = i;
+		for (int j = i + 1; j < n; j++) {
+			if (soSanhPhanSo(ds[j], ds[min]) < 0) {
+				min = j;
+			}
+		}
+		if (min != i) {
+			PhanSo temp = ds[i];
+			ds[i] = ds[min];
+			ds[min] = temp;
+		}
+	}
+}
+
 
 
 void chuong2_8_1() {
@@ -161,14 +195,24 @@ void chuong2_8_1() {
     // Xuất ra nghịch đảo giá trị các phân số trong mảng
     //nghichDaoPhanSo(ds, n);
 
-    //sap xep tang dan theo thuat toan INTERCHANGE SORT
-    interchangeSortTang(ds, n);
-    printf("\nDanh sách các phân số sau khi sắp xếp tăng dần:\n");
+    ////sap xep tang dan theo thuat toan INTERCHANGE SORT
+    //interchangeSortTang(ds, n);
+    //printf("\nDanh sách các phân số sau khi sắp xếp tăng dần:\n");
+    //inDanhSachPhanSo(ds, n);
+
+    ////sap xep giam dan theo thuat toan INTERCHANGE SORT
+    //interchangeSortGiam(ds, n);
+    //printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
+    //inDanhSachPhanSo(ds, n);
+
+    //sap xep giam dan theo thuat toan Selection Sort
+    selectionSortGiam(ds, n);
+    printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
     inDanhSachPhanSo(ds, n);
 
-    //sap xep giam dan theo thuat toan INTERCHANGE SORT
-    interchangeSortGiam(ds, n);
-    printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
+    //sap xep tang dan theo thuat toan Selection Sort
+    selectionSortTang(ds, n);
+    printf("\nDanh sách các phân số sau khi sắp xếp tăng dần:\n");
     inDanhSachPhanSo(ds, n);
 
 
