@@ -44,31 +44,60 @@ void nhapDanhSachSinhVien(SinhVien ds[], int* n) {
 }
 
 //xuat
-void xuatSinhVien(const SinhVien* sv) {
+void xuatSinhVien(SinhVien* sv) {
 	printf("Số thứ tự: %d\n", sv->stt);
 	printf("Mã số sinh viên: %s\n", sv->maSV);
 	printf("Họ tên sinh viên: %s\n", sv->hoTen);
 	printf("Điểm tiểu luận: %.2f\n", sv->diemTieuLuan);
 	printf("Điểm thi kết thúc môn: %.2f\n", sv->diemThiKetThuc);
 }
-void xuatDanhSachSinhVien(const SinhVien ds[], int n) {
+void xuatDanhSachSinhVien(SinhVien ds[], int n) {
 	for (int i = 0; i < n; i++) {
 		printf("Thông tin sinh viên thứ %d:\n", i + 1);
 		xuatSinhVien(&ds[i]);
 	}
 }
 
+float tinhDiemTongKet(SinhVien* sv) {
+	return 0.3 * sv->diemTieuLuan + 0.7 * sv->diemThiKetThuc;
+}
+
+void xuatSinhVienVaDiemTongKet(SinhVien* sv) {
+	printf("Số thứ tự: %d\n", sv->stt);
+	printf("Mã số sinh viên: %s\n", sv->maSV);
+	printf("Họ tên sinh viên: %s\n", sv->hoTen);
+	printf("Điểm tiểu luận: %.2f\n", sv->diemTieuLuan);
+	printf("Điểm thi kết thúc môn: %.2f\n", sv->diemThiKetThuc);
+	printf("Điểm tổng kết: %.2f\n", tinhDiemTongKet(sv));
+}	
+void xuatDanhSachSinhVienVaDiemTongKet(SinhVien ds[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("Thông tin sinh viên thứ %d:\n", i + 1);
+		xuatSinhVienVaDiemTongKet(&ds[i]);
+	}
+}
 
 
 void chuong2_slide9_bai2() {
-	SinhVien ds[MAX_SV];
+	
 	int n;
 
 	// Nhập danh sách sinh viên
-	nhapDanhSachSinhVien(ds, &n);
+	//nhapDanhSachSinhVien(ds, &n);
+
+	SinhVien ds[MAX_SV] = {
+		{1, "SV001", "Nguyen Van A", 8.5, 7.5},
+		{2, "SV002", "Tran Thi B", 9.0, 8.0},
+		{3, "SV003", "Le Van C", 7.0, 6.5}
+	};
+	n = 3;
 
 	// Xuất danh sách sinh viên
-	printf("\nDanh sách sinh viên đã nhập:\n");
-	xuatDanhSachSinhVien(ds, n);
+	/*printf("\nDanh sách sinh viên đã nhập:\n");
+	xuatDanhSachSinhVien(ds, n);*/
 
+
+	// Xuất danh sách sinh viên kèm theo điểm tổng kết
+	printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
+	xuatDanhSachSinhVienVaDiemTongKet(ds, n);
 }
