@@ -178,6 +178,15 @@ void sapXepGiamDanTheoDiemTongKet(SinhVien ds[], int n) {
 }
 
 
+float tinhDiemTrungBinh(SinhVien ds[], int n) {
+	if (n == 0) return 0.0;
+
+	float tongDiem = 0.0;
+	for (int i = 0; i < n; i++) {
+		tongDiem += tinhDiemTongKet(&ds[i]);
+	}
+	return tongDiem / n;
+}
 
 void chuong2_slide9_bai2() {
 	
@@ -192,6 +201,10 @@ void chuong2_slide9_bai2() {
 		{3, "SV003", "Le Van C", 7.0, 6.5}
 	};
 	n = 3;
+
+	// Tính điểm trung bình của tất cả các sinh viên
+	float diemTrungBinh = tinhDiemTrungBinh(ds, n);
+	printf("Điểm trung bình của tất cả các sinh viên: %.2f\n", diemTrungBinh);
 
 	// Xuất danh sách sinh viên
 	/*printf("\nDanh sách sinh viên đã nhập:\n");
@@ -229,15 +242,15 @@ void chuong2_slide9_bai2() {
 	/*printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
 	xuatDanhSachSinhVienVaDiemHe4(ds, n);*/
 
-	// Sắp xếp tăng dần theo điểm tổng kết
-	sapXepTangDanTheoDiemTongKet(ds, n);
-	printf("\nDanh sách sinh viên sau khi sắp xếp tăng dần theo điểm tổng kết:\n");
-	xuatDanhSachSinhVienVaDiemHe4(ds, n);
+	//// Sắp xếp tăng dần theo điểm tổng kết
+	//sapXepTangDanTheoDiemTongKet(ds, n);
+	//printf("\nDanh sách sinh viên sau khi sắp xếp tăng dần theo điểm tổng kết:\n");
+	//xuatDanhSachSinhVienVaDiemHe4(ds, n);
 
-	// Sắp xếp giảm dần theo điểm tổng kết
-	sapXepGiamDanTheoDiemTongKet(ds, n);
-	printf("\nDanh sách sinh viên sau khi sắp xếp giảm dần theo điểm tổng kết:\n");
-	xuatDanhSachSinhVienVaDiemHe4(ds, n);
+	//// Sắp xếp giảm dần theo điểm tổng kết
+	//sapXepGiamDanTheoDiemTongKet(ds, n);
+	//printf("\nDanh sách sinh viên sau khi sắp xếp giảm dần theo điểm tổng kết:\n");
+	//xuatDanhSachSinhVienVaDiemHe4(ds, n);
 
 
 	return;
