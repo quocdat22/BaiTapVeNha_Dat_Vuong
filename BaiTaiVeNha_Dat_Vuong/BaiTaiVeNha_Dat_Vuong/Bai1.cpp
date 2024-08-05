@@ -76,6 +76,27 @@ PhanSo timPhanSoNhoNhat(PhanSo ds[], int n) {
     return min;
 }
 
+//Tính tổng các phân số có trong danh sách.
+PhanSo tongPhanSo(PhanSo ds[], int n) {
+	PhanSo sum = ds[0];
+	for (int i = 1; i < n; i++) {
+		sum.tu = sum.tu * ds[i].mau + ds[i].tu * sum.mau;
+		sum.mau = sum.mau * ds[i].mau;
+	}
+	return sum;
+}
+
+//Tính tích các phân số có trong danh sách.
+PhanSo tichPhanSo(PhanSo ds[], int n) {
+	PhanSo tich = ds[0];
+	for (int i = 1; i < n; i++) {
+		tich.tu = tich.tu * ds[i].tu;
+		tich.mau = tich.mau * ds[i].mau;
+	}
+	return tich;
+}
+
+
 void chuong2_8_1() {
     PhanSo ds[MAX_SIZE];
     int n;
@@ -87,13 +108,23 @@ void chuong2_8_1() {
     printf("\nDanh sách các phân số đã nhập:\n");
     inDanhSachPhanSo(ds, n);
 
-    // Tìm phân số lớn nhất
-    PhanSo max = timPhanSoLonNhat(ds, n);
-    printf("\nPhân số lớn nhất: %d/%d\n", max.tu, max.mau);
+    //// Tìm phân số lớn nhất
+    //PhanSo max = timPhanSoLonNhat(ds, n);
+    //printf("\nPhân số lớn nhất: %d/%d\n", max.tu, max.mau);
 
-    // Tìm phân số nhỏ nhất
-    PhanSo min = timPhanSoNhoNhat(ds, n);
-    printf("\nPhân số nhỏ nhất: %d/%d\n", min.tu, min.mau);
+    //// Tìm phân số nhỏ nhất
+    //PhanSo min = timPhanSoNhoNhat(ds, n);
+    //printf("\nPhân số nhỏ nhất: %d/%d\n", min.tu, min.mau);
+
+    // Tính tổng các phân số
+    PhanSo sum = tongPhanSo(ds, n);
+    printf("\nTổng các phân số: %d/%d\n", sum.tu, sum.mau);
+
+    // Tính tích các phân số
+    PhanSo tich = tichPhanSo(ds, n);
+    printf("\nTích các phân số: %d/%d\n", tich.tu, tich.mau);
+
+
 
     return;
 }
