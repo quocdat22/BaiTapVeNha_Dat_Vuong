@@ -2,7 +2,4 @@
 C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\Bai1.cpp(14,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\Bai1.cpp(16,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\Bai1.cpp(22,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  main.cpp
-C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\main.cpp(3,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  Generating Code...
   BaiTaiVeNha_Dat_Vuong.vcxproj -> C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\x64\Debug\BaiTaiVeNha_Dat_Vuong.exe

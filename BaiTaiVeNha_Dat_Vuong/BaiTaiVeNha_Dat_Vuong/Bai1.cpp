@@ -39,6 +39,43 @@ void inDanhSachPhanSo(PhanSo ds[], int n) {
     }
 }
 
+int soSanhPhanSo(PhanSo a, PhanSo b) {
+    int value1 = a.tu * b.mau;
+    int value2 = b.tu * a.mau;
+
+    if (value1 > value2) {
+        return 1;
+    }
+    else if (value1 < value2) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
+}
+
+// Hàm tìm phân số lớn nhất
+PhanSo timPhanSoLonNhat(PhanSo ds[], int n) {
+    PhanSo max = ds[0];
+    for (int i = 1; i < n; i++) {
+        if (soSanhPhanSo(ds[i], max) > 0) {
+            max = ds[i];
+        }
+    }
+    return max;
+}
+
+// Hàm tìm phân số nhỏ nhất
+PhanSo timPhanSoNhoNhat(PhanSo ds[], int n) {
+    PhanSo min = ds[0];
+    for (int i = 1; i < n; i++) {
+        if (soSanhPhanSo(ds[i], min) < 0) {
+            min = ds[i];
+        }
+    }
+    return min;
+}
+
 void chuong2_8_1() {
     PhanSo ds[MAX_SIZE];
     int n;
@@ -49,6 +86,14 @@ void chuong2_8_1() {
     // In danh sách các phân số
     printf("\nDanh sách các phân số đã nhập:\n");
     inDanhSachPhanSo(ds, n);
+
+    // Tìm phân số lớn nhất
+    PhanSo max = timPhanSoLonNhat(ds, n);
+    printf("\nPhân số lớn nhất: %d/%d\n", max.tu, max.mau);
+
+    // Tìm phân số nhỏ nhất
+    PhanSo min = timPhanSoNhoNhat(ds, n);
+    printf("\nPhân số nhỏ nhất: %d/%d\n", min.tu, min.mau);
 
     return;
 }
