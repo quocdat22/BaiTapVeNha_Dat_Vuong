@@ -39,6 +39,9 @@
     <ClCompile Include="chuong3_bai7.cpp">
       <Filter>Source Files\Chuong3</Filter>
     </ClCompile>
+    <ClCompile Include="chuong3_bai8.cpp">
+      <Filter>Source Files\Chuong3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaiTap.h">
