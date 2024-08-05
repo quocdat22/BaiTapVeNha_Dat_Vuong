@@ -117,6 +117,34 @@ void demSinhVienDatVaKhongDat(SinhVien ds[], int n, int* soSinhVienDat, int* soS
 	}
 }
 
+float quyDoiDiemHe4(float diemHe10) {
+	if (diemHe10 >= 9.0) return 4.0;
+	if (diemHe10 >= 8.0) return 3.5;
+	if (diemHe10 >= 7.0) return 3.0;
+	if (diemHe10 >= 6.0) return 2.5;
+	if (diemHe10 >= 5.0) return 2.0;
+	if (diemHe10 >= 4.0) return 1.5;
+	if (diemHe10 >= 3.0) return 1.0;
+	return 0.0;
+}
+
+void xuatSinhVienVaDiemHe4(SinhVien* sv) {
+	float diemTongKet = tinhDiemTongKet(sv);
+	printf("Số thứ tự: %d\n", sv->stt);
+	printf("Mã số sinh viên: %s\n", sv->maSV);
+	printf("Họ tên sinh viên: %s\n", sv->hoTen);
+	printf("Điểm tiểu luận: %.2f\n", sv->diemTieuLuan);
+	printf("Điểm thi kết thúc môn: %.2f\n", sv->diemThiKetThuc);
+	printf("Điểm tổng kết: %.2f\n", diemTongKet);
+	printf("Điểm quy đổi hệ 4: %.2f\n", quyDoiDiemHe4(diemTongKet));
+}
+void xuatDanhSachSinhVienVaDiemHe4(SinhVien ds[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("Thông tin sinh viên thứ %d:\n", i + 1);
+		xuatSinhVienVaDiemHe4(&ds[i]);
+	}
+}
+
 
 void chuong2_slide9_bai2() {
 	
@@ -137,9 +165,9 @@ void chuong2_slide9_bai2() {
 	xuatDanhSachSinhVien(ds, n);*/
 
 
-	// Xuất danh sách sinh viên kèm theo điểm tổng kết
-	printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
-	xuatDanhSachSinhVienVaDiemTongKet(ds, n);
+	//// Xuất danh sách sinh viên kèm theo điểm tổng kết
+	//printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
+	//xuatDanhSachSinhVienVaDiemTongKet(ds, n);
 
 
 	//// Tìm và in sinh viên có điểm tổng kết cao nhất
@@ -157,12 +185,16 @@ void chuong2_slide9_bai2() {
 	//}
 
 
-	// Đếm số lượng sinh viên đạt và không đạt
-	int soSinhVienDat, soSinhVienKhongDat;
-	demSinhVienDatVaKhongDat(ds, n, &soSinhVienDat, &soSinhVienKhongDat);
+	//// Đếm số lượng sinh viên đạt và không đạt
+	//int soSinhVienDat, soSinhVienKhongDat;
+	//demSinhVienDatVaKhongDat(ds, n, &soSinhVienDat, &soSinhVienKhongDat);
 
-	printf("\nSố lượng sinh viên đạt: %d\n", soSinhVienDat);
-	printf("Số lượng sinh viên không đạt: %d\n", soSinhVienKhongDat);
+	//printf("\nSố lượng sinh viên đạt: %d\n", soSinhVienDat);
+	//printf("Số lượng sinh viên không đạt: %d\n", soSinhVienKhongDat);
+
+
+	printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
+	xuatDanhSachSinhVienVaDiemHe4(ds, n);
 
 	return;
 }
