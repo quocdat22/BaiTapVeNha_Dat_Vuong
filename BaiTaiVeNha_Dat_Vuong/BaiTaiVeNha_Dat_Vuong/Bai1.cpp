@@ -163,6 +163,64 @@ void selectionSortTang(PhanSo ds[], int n) {
 	}
 }
 
+//sap xep tang dan theo thuat toan quick sort
+
+void quickSortTang(PhanSo ds[], int n) {
+	int i = 0;
+	int j = n - 1;
+	PhanSo pivot = ds[n / 2];
+	while (i <= j) {
+		while (soSanhPhanSo(ds[i], pivot) < 0) {
+			i++;
+		}
+		while (soSanhPhanSo(ds[j], pivot) > 0) {
+			j--;
+		}
+		if (i <= j) {
+			PhanSo temp = ds[i];
+			ds[i] = ds[j];
+			ds[j] = temp;
+			i++;
+			j--;
+		}
+	}
+	if (0 < j) {
+		quickSortTang(ds, j + 1);
+	}
+	if (i < n) {
+		quickSortTang(ds + i, n - i);
+	}
+}
+
+//sap xep giam dan theo thuat toan quick sort
+void quickSortGiam(PhanSo ds[], int n) {
+	int i = 0;
+	int j = n - 1;
+	PhanSo pivot = ds[n / 2];
+	while (i <= j) {
+		while (soSanhPhanSo(ds[i], pivot) > 0) {
+			i++;
+		}
+		while (soSanhPhanSo(ds[j], pivot) < 0) {
+			j--;
+		}
+		if (i <= j) {
+			PhanSo temp = ds[i];
+			ds[i] = ds[j];
+			ds[j] = temp;
+			i++;
+			j--;
+		}
+	}
+	if (0 < j) {
+		quickSortGiam(ds, j + 1);
+	}
+	if (i < n) {
+		quickSortGiam(ds + i, n - i);
+	}
+}
+
+
 
 
 void chuong2_8_1() {
@@ -205,15 +263,26 @@ void chuong2_8_1() {
     //printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
     //inDanhSachPhanSo(ds, n);
 
-    //sap xep giam dan theo thuat toan Selection Sort
-    selectionSortGiam(ds, n);
-    printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
-    inDanhSachPhanSo(ds, n);
+    ////sap xep giam dan theo thuat toan Selection Sort
+    //selectionSortGiam(ds, n);
+    //printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
+    //inDanhSachPhanSo(ds, n);
 
-    //sap xep tang dan theo thuat toan Selection Sort
-    selectionSortTang(ds, n);
-    printf("\nDanh sách các phân số sau khi sắp xếp tăng dần:\n");
-    inDanhSachPhanSo(ds, n);
+    ////sap xep tang dan theo thuat toan Selection Sort
+    //selectionSortTang(ds, n);
+    //printf("\nDanh sách các phân số sau khi sắp xếp tăng dần:\n");
+    //inDanhSachPhanSo(ds, n);
+
+	//sap xep tang dan theo thuat toan quick sort
+	quickSortTang(ds, n);
+	printf("\nDanh sách các phân số sau khi sắp xếp tăng dần:\n");
+	inDanhSachPhanSo(ds, n);
+
+	//sap xep giam dan theo thuat toan quick sort
+	quickSortGiam(ds, n);
+	printf("\nDanh sách các phân số sau khi sắp xếp giảm dần:\n");
+	inDanhSachPhanSo(ds, n);
+
 
 
     return;
