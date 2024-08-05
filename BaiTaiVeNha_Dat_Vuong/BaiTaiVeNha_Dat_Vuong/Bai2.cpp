@@ -77,6 +77,30 @@ void xuatDanhSachSinhVienVaDiemTongKet(SinhVien ds[], int n) {
 	}
 }
 
+//diem tong ket cao nhat
+SinhVien* timSinhVienDiemTongKetCaoNhat(SinhVien ds[], int n) {
+	if (n == 0) return NULL;
+
+	SinhVien* max = &ds[0];
+	for (int i = 1; i < n; i++) {
+		if (tinhDiemTongKet(&ds[i]) > tinhDiemTongKet(max)) {
+			max = &ds[i];
+		}
+	}
+	return max;
+}
+//thap nhat
+SinhVien* timSinhVienDiemTongKetThapNhat(SinhVien ds[], int n) {
+	if (n == 0) return NULL;
+
+	SinhVien* min = &ds[0];
+	for (int i = 1; i < n; i++) {
+		if (tinhDiemTongKet(&ds[i]) < tinhDiemTongKet(min)) {
+			min = &ds[i];
+		}
+	}
+	return min;
+}
 
 void chuong2_slide9_bai2() {
 	
@@ -100,4 +124,19 @@ void chuong2_slide9_bai2() {
 	// Xuất danh sách sinh viên kèm theo điểm tổng kết
 	printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
 	xuatDanhSachSinhVienVaDiemTongKet(ds, n);
+
+
+	// Tìm và in sinh viên có điểm tổng kết cao nhất
+	SinhVien* svMax = timSinhVienDiemTongKetCaoNhat(ds, n);
+	if (svMax != NULL) {
+		printf("\nSinh viên có điểm tổng kết cao nhất:\n");
+		xuatSinhVienVaDiemTongKet(svMax);
+	}
+
+	// Tìm và in sinh viên có điểm tổng kết thấp nhất
+	SinhVien* svMin = timSinhVienDiemTongKetThapNhat(ds, n);
+	if (svMin != NULL) {
+		printf("\nSinh viên có điểm tổng kết thấp nhất:\n");
+		xuatSinhVienVaDiemTongKet(svMin);
+	}
 }
