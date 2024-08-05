@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include <ctype.h>
+#include"functions.h"
 
 //Nhập vào một chuỗi, xóa những khoảng trắng thừa trong chuỗi.
 void removeExtraSpaces(char* str) {

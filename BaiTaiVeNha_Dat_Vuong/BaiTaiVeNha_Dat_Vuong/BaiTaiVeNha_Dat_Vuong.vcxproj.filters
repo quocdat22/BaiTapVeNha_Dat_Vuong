@@ -30,10 +30,16 @@
     <ClCompile Include="chuong3_bai4.cpp">
       <Filter>Source Files\Chuong3</Filter>
     </ClCompile>
+    <ClCompile Include="chuong3_bai5.cpp">
+      <Filter>Source Files\Chuong3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaiTap.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="functions.h">
+      <Filter>Source Files\Chuong3</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

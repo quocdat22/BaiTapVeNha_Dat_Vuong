@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\chuong3_bai4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|solutionrelative:BaiTaiVeNha_Dat_Vuong\\chuong3_bai4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\chuong3_bai5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|solutionrelative:BaiTaiVeNha_Dat_Vuong\\chuong3_bai5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "chuong3_bai4.cpp",
-              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\chuong3_bai4.cpp",
-              "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\chuong3_bai4.cpp",
-              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\chuong3_bai4.cpp",
-              "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\chuong3_bai4.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
+              "Title": "chuong3_bai5.cpp",
+              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\chuong3_bai5.cpp",
+              "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\chuong3_bai5.cpp",
+              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\chuong3_bai5.cpp",
+              "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\chuong3_bai5.cpp",
+              "ViewState": "AQIAACEAAAAAAAAAAAAiwCoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-05T10:50:55.184Z",
+              "WhenOpened": "2024-08-05T10:57:29.709Z",
               "EditorCaption": ""
             },
             {
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\BaiTap.h",
               "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\BaiTap.h",
               "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\BaiTap.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-08-05T10:31:36.269Z",
               "EditorCaption": ""
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\main.cpp",
               "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\main.cpp",
               "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-05T03:44:20.183Z",
               "EditorCaption": ""
