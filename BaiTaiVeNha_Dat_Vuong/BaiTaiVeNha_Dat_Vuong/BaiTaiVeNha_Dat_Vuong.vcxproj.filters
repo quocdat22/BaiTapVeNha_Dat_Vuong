@@ -72,4 +72,9 @@
       <Filter>Source Files\Chuong3</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="sinhvien.txt">
+      <Filter>Source Files\Chuong2\9</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

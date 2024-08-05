@@ -187,6 +187,55 @@ float tinhDiemTrungBinh(SinhVien ds[], int n) {
 	}
 	return tongDiem / n;
 }
+void ghiDanhSachSinhVienVaoFile(const char* tenFile, SinhVien ds[], int n) {
+	FILE* file = fopen(tenFile, "w");
+	if (file == NULL) {
+		printf("Không thể mở file để ghi.\n");
+		return;
+	}
+
+	for (int i = 0; i < n; i++) {
+		fprintf(file, "%d %s %s %.2f %.2f\n", ds[i].stt, ds[i].maSV, ds[i].hoTen, ds[i].diemTieuLuan, ds[i].diemThiKetThuc);
+	}
+
+	fclose(file);
+}
+
+
+int docDanhSachSinhVienTuFile(const char* tenFile, SinhVien ds[], int maxN) {
+	FILE* file = fopen(tenFile, "r");
+	if (file == NULL) {
+		printf("Không thể mở file để đọc.\n");
+		return 0;
+	}
+
+	int n = 0;
+	char line[100];
+	while (fgets(line, sizeof(line), file) != NULL) {
+		if (n >= maxN) break;
+
+		sscanf(line, "%d %s", &ds[n].stt, ds[n].maSV);
+		char* p = strchr(line, ' ');
+		if (p != NULL) {
+			p++;
+			sscanf(p, "%[^\n]", ds[n].hoTen); // Đọc họ tên sinh viên
+		}
+
+		// Tiếp theo đọc điểm
+		p = strchr(p, ' ');
+		if (p != NULL) {
+			p++;
+			sscanf(p, "%f %f", &ds[n].diemTieuLuan, &ds[n].diemThiKetThuc);
+		}
+
+		n++;
+	}
+
+	fclose(file);
+	return n;
+}
+
+
 
 void chuong2_slide9_bai2() {
 	
@@ -202,9 +251,18 @@ void chuong2_slide9_bai2() {
 	};
 	n = 3;
 
-	// Tính điểm trung bình của tất cả các sinh viên
-	float diemTrungBinh = tinhDiemTrungBinh(ds, n);
-	printf("Điểm trung bình của tất cả các sinh viên: %.2f\n", diemTrungBinh);
+	ghiDanhSachSinhVienVaoFile("sinhvien.txt", ds, n);
+
+	// Đọc danh sách sinh viên từ file
+	n = docDanhSachSinhVienTuFile("sinhvien.txt", ds, MAX_SV);
+
+	// Xuất danh sách sinh viên
+	xuatDanhSachSinhVien(ds, n);
+
+
+	//// Tính điểm trung bình của tất cả các sinh viên
+	//float diemTrungBinh = tinhDiemTrungBinh(ds, n);
+	//printf("Điểm trung bình của tất cả các sinh viên: %.2f\n", diemTrungBinh);
 
 	// Xuất danh sách sinh viên
 	/*printf("\nDanh sách sinh viên đã nhập:\n");
