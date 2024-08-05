@@ -144,6 +144,39 @@ void xuatDanhSachSinhVienVaDiemHe4(SinhVien ds[], int n) {
 		xuatSinhVienVaDiemHe4(&ds[i]);
 	}
 }
+//sap xep diem tong ket tang dan
+void sapXepTangDanTheoDiemTongKet(SinhVien ds[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int min_idx = i;
+		for (int j = i + 1; j < n; j++) {
+			if (tinhDiemTongKet(&ds[j]) < tinhDiemTongKet(&ds[min_idx])) {
+				min_idx = j;
+			}
+		}
+		if (min_idx != i) {
+			SinhVien temp = ds[i];
+			ds[i] = ds[min_idx];
+			ds[min_idx] = temp;
+		}
+	}
+}
+
+void sapXepGiamDanTheoDiemTongKet(SinhVien ds[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int max_idx = i;
+		for (int j = i + 1; j < n; j++) {
+			if (tinhDiemTongKet(&ds[j]) > tinhDiemTongKet(&ds[max_idx])) {
+				max_idx = j;
+			}
+		}
+		if (max_idx != i) {
+			SinhVien temp = ds[i];
+			ds[i] = ds[max_idx];
+			ds[max_idx] = temp;
+		}
+	}
+}
+
 
 
 void chuong2_slide9_bai2() {
@@ -193,8 +226,19 @@ void chuong2_slide9_bai2() {
 	//printf("Số lượng sinh viên không đạt: %d\n", soSinhVienKhongDat);
 
 
-	printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
+	/*printf("\nDanh sách sinh viên có sẵn và điểm tổng kết:\n");
+	xuatDanhSachSinhVienVaDiemHe4(ds, n);*/
+
+	// Sắp xếp tăng dần theo điểm tổng kết
+	sapXepTangDanTheoDiemTongKet(ds, n);
+	printf("\nDanh sách sinh viên sau khi sắp xếp tăng dần theo điểm tổng kết:\n");
 	xuatDanhSachSinhVienVaDiemHe4(ds, n);
+
+	// Sắp xếp giảm dần theo điểm tổng kết
+	sapXepGiamDanTheoDiemTongKet(ds, n);
+	printf("\nDanh sách sinh viên sau khi sắp xếp giảm dần theo điểm tổng kết:\n");
+	xuatDanhSachSinhVienVaDiemHe4(ds, n);
+
 
 	return;
 }
