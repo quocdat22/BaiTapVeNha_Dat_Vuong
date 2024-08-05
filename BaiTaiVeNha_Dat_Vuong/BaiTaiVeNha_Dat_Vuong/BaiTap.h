@@ -21,4 +21,6 @@ void chuong3_bai10();
 
 void chuong2_8_1();
 
+void chuong2_slide9_bai2();
+
 #endif

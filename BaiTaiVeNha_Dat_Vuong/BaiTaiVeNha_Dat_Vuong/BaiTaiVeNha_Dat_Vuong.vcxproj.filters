@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Chuong2\8">
       <UniqueIdentifier>{69f241ed-9687-49fe-a714-d925b280206f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Chuong2\9">
+      <UniqueIdentifier>{b75e1d4f-8abb-43bb-987e-cad60789007c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="Bai1.cpp">
       <Filter>Source Files\Chuong2\8</Filter>
+    </ClCompile>
+    <ClCompile Include="Bai2.cpp">
+      <Filter>Source Files\Chuong2\9</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
