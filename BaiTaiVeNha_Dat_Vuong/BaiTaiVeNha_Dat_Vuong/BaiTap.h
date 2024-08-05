@@ -15,4 +15,6 @@ void chuong3_bai7();
 
 void chuong3_bai8();
 
+void chuong3_bai9();
+
 #endif

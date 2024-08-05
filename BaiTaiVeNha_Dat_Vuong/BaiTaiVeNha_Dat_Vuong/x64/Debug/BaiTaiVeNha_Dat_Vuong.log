@@ -1,7 +1,7 @@
 ﻿  chuong3_bai2.cpp
   chuong3_bai3.cpp
-C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\chuong3_bai3.cpp(9,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   chuong3_bai4.cpp
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\chuong3_bai3.cpp(9,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\chuong3_bai4.cpp(14,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   chuong3_bai5.cpp
 C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\ly thuyet\BaiTaiVeNha_Dat_Vuong\BaiTaiVeNha_Dat_Vuong\chuong3_bai5.cpp(40,19): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
