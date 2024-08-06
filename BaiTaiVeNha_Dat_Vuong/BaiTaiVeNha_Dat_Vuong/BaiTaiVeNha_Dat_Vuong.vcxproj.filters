@@ -72,6 +72,9 @@
     <ClCompile Include="Bai3Vuong.cpp">
       <Filter>Source Files\Chuong2\Vuong</Filter>
     </ClCompile>
+    <ClCompile Include="Bai5Vuong.cpp">
+      <Filter>Source Files\Chuong2\Vuong</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaiTap.h">
