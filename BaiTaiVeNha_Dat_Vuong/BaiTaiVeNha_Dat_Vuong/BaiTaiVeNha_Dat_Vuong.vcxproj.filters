@@ -25,6 +25,7 @@
     <Filter Include="Source Files\Chuong2\9">
       <UniqueIdentifier>{b75e1d4f-8abb-43bb-987e-cad60789007c}</UniqueIdentifier>
     </Filter>
+<<<<<<< HEAD
     <Filter Include="Source Files\Chuong2\10">
       <UniqueIdentifier>{e15a082d-76e1-4fe2-b0cc-c7630c312e45}</UniqueIdentifier>
     </Filter>
@@ -39,6 +40,10 @@
     </Filter>
     <Filter Include="Source Files\Chuong2\14">
       <UniqueIdentifier>{cefe57e4-663a-491f-9004-84ba03a993d6}</UniqueIdentifier>
+=======
+    <Filter Include="Source Files\Chuong2\Vuong">
+      <UniqueIdentifier>{847b2b13-f102-4d6f-b34e-a9ee1d320454}</UniqueIdentifier>
+>>>>>>> 2b4a5f287f18a8dc441b5876bf3b89ad2e6ac3ab
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +83,7 @@
     <ClCompile Include="Bai2.cpp">
       <Filter>Source Files\Chuong2\9</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Bai3Dat.cpp">
       <Filter>Source Files\Chuong2\10</Filter>
     </ClCompile>
@@ -92,6 +98,19 @@
     </ClCompile>
     <ClCompile Include="BaiTap14.cpp">
       <Filter>Source Files\Chuong2\14</Filter>
+=======
+    <ClCompile Include="Bai2Vuong.cpp">
+      <Filter>Source Files\Chuong2\Vuong</Filter>
+    </ClCompile>
+    <ClCompile Include="Bai3Vuong.cpp">
+      <Filter>Source Files\Chuong2\Vuong</Filter>
+    </ClCompile>
+    <ClCompile Include="Bai5Vuong.cpp">
+      <Filter>Source Files\Chuong2\Vuong</Filter>
+    </ClCompile>
+    <ClCompile Include="XyLyMang.cpp">
+      <Filter>Source Files\Chuong2\Vuong</Filter>
+>>>>>>> 2b4a5f287f18a8dc441b5876bf3b89ad2e6ac3ab
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

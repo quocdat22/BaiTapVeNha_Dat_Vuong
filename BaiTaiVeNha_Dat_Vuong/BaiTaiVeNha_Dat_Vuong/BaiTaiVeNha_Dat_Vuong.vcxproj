@@ -130,10 +130,16 @@
     <ClCompile Include="13.cpp" />
     <ClCompile Include="Bai1.cpp" />
     <ClCompile Include="Bai2.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Bai3Dat.cpp" />
     <ClCompile Include="BaiTap11.cpp" />
     <ClCompile Include="BaiTap12.cpp" />
     <ClCompile Include="BaiTap14.cpp" />
+=======
+    <ClCompile Include="Bai2Vuong.cpp" />
+    <ClCompile Include="Bai3Vuong.cpp" />
+    <ClCompile Include="Bai5Vuong.cpp" />
+>>>>>>> 2b4a5f287f18a8dc441b5876bf3b89ad2e6ac3ab
     <ClCompile Include="chuong3_bai10.cpp" />
     <ClCompile Include="chuong3_bai2.cpp" />
     <ClCompile Include="chuong3_bai3.cpp" />
@@ -144,6 +150,7 @@
     <ClCompile Include="chuong3_bai8.cpp" />
     <ClCompile Include="chuong3_bai9.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="XyLyMang.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaiTap.h" />
