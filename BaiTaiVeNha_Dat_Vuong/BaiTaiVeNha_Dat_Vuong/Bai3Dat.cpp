@@ -1,106 +1,253 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Cấu trúc lưu thông tin một môn học
-struct Subject{
-    char maMon[10];      // Mã môn học
-    char tenMon[50];     // Tên môn học
-    int soTinChi;        // Số tín chỉ
-    float diem;          // Điểm của môn học
-};
+#define MAX_SUBJECTS 5
+#define MAX_NAME_LENGTH 50
+#define MAX_ID_LENGTH 15
 
-// Cấu trúc lưu thông tin một sinh viên
-struct Student{
-    char maSoSinhVien[10];  // Mã số sinh viên
-    char hoTen[50];         // Họ tên sinh viên
-    Subject nhapMonLapTrinh;  // Điểm môn Nhập môn lập trình
-    Subject toanA1;           // Điểm môn Toán A1
-    Subject toanA2;           // Điểm môn Toán A2
-    Subject vatLyKyThuat;     // Điểm môn Vật lý kỹ thuật
-    Subject anhVan;           // Điểm môn Anh văn
-    float diemTrungBinh;      // Điểm trung bình tích lũy
-};
-// Hàm tính điểm trung bình tích lũy
-float tinhDiemTrungBinh(Student* student) {
-    int tongTinChi = student->nhapMonLapTrinh.soTinChi +
-        student->toanA1.soTinChi +
-        student->toanA2.soTinChi +
-        student->vatLyKyThuat.soTinChi +
-        student->anhVan.soTinChi;
+typedef struct {
+    char subjectCode[MAX_ID_LENGTH];
+    char subjectName[MAX_NAME_LENGTH];
+    int credit;
+    float score;
+} Subject;
 
-    float tongDiem = student->nhapMonLapTrinh.diem * student->nhapMonLapTrinh.soTinChi +
-        student->toanA1.diem * student->toanA1.soTinChi +
-        student->toanA2.diem * student->toanA2.soTinChi +
-        student->vatLyKyThuat.diem * student->vatLyKyThuat.soTinChi +
-        student->anhVan.diem * student->anhVan.soTinChi;
+typedef struct {
+    char studentID[MAX_ID_LENGTH];
+    char studentName[MAX_NAME_LENGTH];
+    Subject subjects[MAX_SUBJECTS];
+    float averageScore;
+} Student;
 
-    return tongDiem / tongTinChi;
-}
-
-// Hàm nhập thông tin một môn học
-void nhapMonHoc(Subject* subject) {
-    printf("Nhap ma mon: ");
-    scanf("%s", subject->maMon);
-    printf("Nhap ten mon: ");
-    scanf(" %[^\n]", subject->tenMon);
-    printf("Nhap so tin chi: ");
-    scanf("%d", &subject->soTinChi);
-    printf("Nhap diem: ");
-    scanf("%f", &subject->diem);
-}
-
-// Hàm nhập thông tin một sinh viên
-void nhapSinhVien(Student* student) {
-    printf("Nhap ma so sinh vien: ");
-    scanf("%s", student->maSoSinhVien);
-    printf("Nhap ho ten sinh vien: ");
-    scanf(" %[^\n]", student->hoTen);
-
-    printf("\nNhap thong tin mon Nhap mon lap trinh:\n");
-    nhapMonHoc(&student->nhapMonLapTrinh);
-
-    printf("\nNhap thong tin mon Toan A1:\n");
-    nhapMonHoc(&student->toanA1);
-
-    printf("\nNhap thong tin mon Toan A2:\n");
-    nhapMonHoc(&student->toanA2);
-
-    printf("\nNhap thong tin mon Vat ly ky thuat:\n");
-    nhapMonHoc(&student->vatLyKyThuat);
-
-    printf("\nNhap thong tin mon Anh van:\n");
-    nhapMonHoc(&student->anhVan);
-
-    // Tính điểm trung bình tích lũy
-    student->diemTrungBinh = tinhDiemTrungBinh(student);
-}
-
-
-
+void inputStudentList(Student* students, int n);
+void outputStudentList(Student* students, int n);
+int findStudentByID(Student* students, int n, char* studentID);
+int findStudentWithHighestAverageScore(Student* students, int n);
+void addStudent(Student* students, int* n, Student newStudent);
+void deleteStudent(Student* students, int* n, char* studentID);
+void sortStudentsByAverageScore(Student* students, int n, int ascending);
+void classifyStudent(Student* student);
+void countPassedFailedSubjects(Student* student);
 
 int main() {
-    // Khởi tạo một sinh viên mẫu để minh họa
-    
-    Student student = {
-       "SV001",                        // Mã số sinh viên
-       "Nguyen Van A",                 // Họ tên
-       {"IT101", "Nhap mon lap trinh", 3, 8.5},  // Nhập môn lập trình
-       {"MA101", "Toan A1", 4, 7.0},             // Toán A1
-       {"MA102", "Toan A2", 3, 8.0},             // Toán A2
-       {"PH101", "Vat ly ky thuat", 3, 6.5},     // Vật lý kỹ thuật
-       {"EN101", "Anh van", 2, 7.5},             // Anh văn
-       7.5                                       // Điểm trung bình tích lũy
+    int n = 3;
+    Student students[100] = {
+        {
+            "SV001", "Nguyen Van A",
+            {
+                {"MH001", "Nhap mon lap trinh", 3, 7.5},
+                {"MH002", "Toan A1", 3, 8.0},
+                {"MH003", "Toan A2", 3, 6.0},
+                {"MH004", "Vat ly ky thuat", 3, 5.5},
+                {"MH005", "Anh van", 3, 7.0}
+            },
+            6.8
+        },
+        {
+            "SV002", "Le Thi B",
+            {
+                {"MH001", "Nhap mon lap trinh", 3, 9.0},
+                {"MH002", "Toan A1", 3, 8.5},
+                {"MH003", "Toan A2", 3, 7.0},
+                {"MH004", "Vat ly ky thuat", 3, 6.5},
+                {"MH005", "Anh van", 3, 8.0}
+            },
+            7.8
+        },
+        {
+            "SV003", "Tran Van C",
+            {
+                {"MH001", "Nhap mon lap trinh", 3, 4.0},
+                {"MH002", "Toan A1", 3, 5.0},
+                {"MH003", "Toan A2", 3, 6.0},
+                {"MH004", "Vat ly ky thuat", 3, 5.0},
+                {"MH005", "Anh van", 3, 4.5}
+            },
+            4.9
+        }
     };
 
+    // Output students
+    printf("\nStudent List:\n");
+    outputStudentList(students, n);
 
-    // Hiển thị thông tin sinh viên mẫu
-    printf("Ma so sinh vien: %s\n", student.maSoSinhVien);
-    printf("Ho ten: %s\n", student.hoTen);
-    printf("Diem Nhap mon lap trinh: %.2f\n", student.nhapMonLapTrinh.diem);
-    printf("Diem Toan A1: %.2f\n", student.toanA1.diem);
-    printf("Diem Toan A2: %.2f\n", student.toanA2.diem);
-    printf("Diem Vat ly ky thuat: %.2f\n", student.vatLyKyThuat.diem);
-    printf("Diem Anh van: %.2f\n", student.anhVan.diem);
-    printf("Diem trung binh: %.2f\n", student.diemTrungBinh);
+    // Find a student by ID
+    char searchID[MAX_ID_LENGTH];
+    printf("\nEnter student ID to search: ");
+    scanf("%s", searchID);
+    int index = findStudentByID(students, n, searchID);
+    if (index != -1) {
+        printf("Student found:\n");
+        outputStudentList(&students[index], 1);
+    }
+    else {
+        printf("Student not found.\n");
+    }
+
+    // Find student with highest average score
+    int highestIndex = findStudentWithHighestAverageScore(students, n);
+    printf("\nStudent with highest average score:\n");
+    outputStudentList(&students[highestIndex], 1);
+
+    // Sort students by average score
+    sortStudentsByAverageScore(students, n, 1);
+    printf("\nStudents sorted by average score (ascending):\n");
+    outputStudentList(students, n);
+
+    // Add a new student
+    Student newStudent = {
+        "SV004", "Pham Thi D",
+        {
+            {"MH001", "Nhap mon lap trinh", 3, 7.0},
+            {"MH002", "Toan A1", 3, 8.0},
+            {"MH003", "Toan A2", 3, 7.5},
+            {"MH004", "Vat ly ky thuat", 3, 6.0},
+            {"MH005", "Anh van", 3, 7.5}
+        },
+        7.2
+    };
+    addStudent(students, &n, newStudent);
+    printf("\nUpdated Student List:\n");
+    outputStudentList(students, n);
+
+    // Delete a student
+    printf("\nEnter student ID to delete: ");
+    scanf("%s", searchID);
+    deleteStudent(students, &n, searchID);
+    printf("\nUpdated Student List:\n");
+    outputStudentList(students, n);
+
+    // Classify and count subjects for each student
+    for (int i = 0; i < n; i++) {
+        classifyStudent(&students[i]);
+        countPassedFailedSubjects(&students[i]);
+    }
 
     return 0;
 }
+
+
+
+void inputStudentList(Student* students, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Enter student ID: ");
+        scanf("%s", students[i].studentID);
+        printf("Enter student name: ");
+        scanf(" %[^\n]", students[i].studentName);
+        float totalScore = 0;
+        for (int j = 0; j < MAX_SUBJECTS; j++) {
+            printf("Enter subject code: ");
+            scanf("%s", students[i].subjects[j].subjectCode);
+            printf("Enter subject name: ");
+            scanf(" %[^\n]", students[i].subjects[j].subjectName);
+            printf("Enter subject credit: ");
+            scanf("%d", &students[i].subjects[j].credit);
+            printf("Enter subject score: ");
+            scanf("%f", &students[i].subjects[j].score);
+            totalScore += students[i].subjects[j].score;
+        }
+        students[i].averageScore = totalScore / MAX_SUBJECTS;
+    }
+}
+
+void outputStudentList(Student* students, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Student ID: %s\n", students[i].studentID);
+        printf("Student Name: %s\n", students[i].studentName);
+        for (int j = 0; j < MAX_SUBJECTS; j++) {
+            printf("Subject Code: %s, Subject Name: %s, Credit: %d, Score: %.2f\n",
+                students[i].subjects[j].subjectCode,
+                students[i].subjects[j].subjectName,
+                students[i].subjects[j].credit,
+                students[i].subjects[j].score);
+        }
+        printf("Average Score: %.2f\n", students[i].averageScore);
+    }
+}
+
+int findStudentByID(Student* students, int n, char* studentID) {
+    for (int i = 0; i < n; i++) {
+        if (strcmp(students[i].studentID, studentID) == 0) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int findStudentWithHighestAverageScore(Student* students, int n) {
+    int highestIndex = 0;
+    for (int i = 1; i < n; i++) {
+        if (students[i].averageScore > students[highestIndex].averageScore) {
+            highestIndex = i;
+        }
+    }
+    return highestIndex;
+}
+
+void addStudent(Student* students, int* n, Student newStudent) {
+    students[*n] = newStudent;
+    (*n)++;
+}
+
+void deleteStudent(Student* students, int* n, char* studentID) {
+    int index = findStudentByID(students, *n, studentID);
+    if (index != -1) {
+        for (int i = index; i < (*n) - 1; i++) {
+            students[i] = students[i + 1];
+        }
+        (*n)--;
+    }
+    else {
+        printf("Student ID not found.\n");
+    }
+}
+
+void sortStudentsByAverageScore(Student* students, int n, int ascending) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if ((ascending && students[i].averageScore > students[j].averageScore) ||
+                (!ascending && students[i].averageScore < students[j].averageScore)) {
+                Student temp = students[i];
+                students[i] = students[j];
+                students[j] = temp;
+            }
+        }
+    }
+}
+
+void classifyStudent(Student* student) {
+    if (student->averageScore >= 9.0) {
+        printf("Student %s is classified as Excellent.\n", student->studentName);
+    }
+    else if (student->averageScore >= 8.0) {
+        printf("Student %s is classified as Very Good.\n", student->studentName);
+    }
+    else if (student->averageScore >= 7.0) {
+        printf("Student %s is classified as Good.\n", student->studentName);
+    }
+    else if (student->averageScore >= 6.0) {
+        printf("Student %s is classified as Fair.\n", student->studentName);
+    }
+    else if (student->averageScore >= 5.0) {
+        printf("Student %s is classified as Average.\n", student->studentName);
+    }
+    else {
+        printf("Student %s is classified as Poor.\n", student->studentName);
+    }
+}
+
+void countPassedFailedSubjects(Student* student) {
+    int passed = 0, failed = 0;
+    for (int i = 0; i < MAX_SUBJECTS; i++) {
+        if (student->subjects[i].score >= 5.0) {
+            passed++;
+        }
+        else {
+            failed++;
+        }
+    }
+    printf("Student %s has passed %d subjects and failed %d subjects.\n",
+        student->studentName, passed, failed);
+}
+
