@@ -34,6 +34,12 @@
     <Filter Include="Source Files\Chuong2\12">
       <UniqueIdentifier>{a2b00acb-5de4-468f-bd2f-9f14c1361580}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Chuong2\13">
+      <UniqueIdentifier>{255d3fd2-e5a4-4367-839f-6304e2b3eeff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chuong2\14">
+      <UniqueIdentifier>{cefe57e4-663a-491f-9004-84ba03a993d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -82,7 +88,10 @@
       <Filter>Source Files\Chuong2\12</Filter>
     </ClCompile>
     <ClCompile Include="13.cpp">
-      <Filter>Source Files\Chuong2</Filter>
+      <Filter>Source Files\Chuong2\13</Filter>
+    </ClCompile>
+    <ClCompile Include="BaiTap14.cpp">
+      <Filter>Source Files\Chuong2\14</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -92,10 +101,18 @@
     <ClInclude Include="functions.h">
       <Filter>Source Files\Chuong3</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="sinhvien.txt">
       <Filter>Source Files\Chuong2\9</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BaiTaiVeNha_Dat_Vuong.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

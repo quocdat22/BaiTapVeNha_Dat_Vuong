@@ -133,6 +133,7 @@
     <ClCompile Include="Bai3Dat.cpp" />
     <ClCompile Include="BaiTap11.cpp" />
     <ClCompile Include="BaiTap12.cpp" />
+    <ClCompile Include="BaiTap14.cpp" />
     <ClCompile Include="chuong3_bai10.cpp" />
     <ClCompile Include="chuong3_bai2.cpp" />
     <ClCompile Include="chuong3_bai3.cpp" />
@@ -147,9 +148,13 @@
   <ItemGroup>
     <ClInclude Include="BaiTap.h" />
     <ClInclude Include="functions.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="sinhvien.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BaiTaiVeNha_Dat_Vuong.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
