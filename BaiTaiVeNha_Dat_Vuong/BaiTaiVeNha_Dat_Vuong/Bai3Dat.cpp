@@ -19,6 +19,63 @@ struct Student{
     Subject anhVan;           // Điểm môn Anh văn
     float diemTrungBinh;      // Điểm trung bình tích lũy
 };
+// Hàm tính điểm trung bình tích lũy
+float tinhDiemTrungBinh(Student* student) {
+    int tongTinChi = student->nhapMonLapTrinh.soTinChi +
+        student->toanA1.soTinChi +
+        student->toanA2.soTinChi +
+        student->vatLyKyThuat.soTinChi +
+        student->anhVan.soTinChi;
+
+    float tongDiem = student->nhapMonLapTrinh.diem * student->nhapMonLapTrinh.soTinChi +
+        student->toanA1.diem * student->toanA1.soTinChi +
+        student->toanA2.diem * student->toanA2.soTinChi +
+        student->vatLyKyThuat.diem * student->vatLyKyThuat.soTinChi +
+        student->anhVan.diem * student->anhVan.soTinChi;
+
+    return tongDiem / tongTinChi;
+}
+
+// Hàm nhập thông tin một môn học
+void nhapMonHoc(Subject* subject) {
+    printf("Nhap ma mon: ");
+    scanf("%s", subject->maMon);
+    printf("Nhap ten mon: ");
+    scanf(" %[^\n]", subject->tenMon);
+    printf("Nhap so tin chi: ");
+    scanf("%d", &subject->soTinChi);
+    printf("Nhap diem: ");
+    scanf("%f", &subject->diem);
+}
+
+// Hàm nhập thông tin một sinh viên
+void nhapSinhVien(Student* student) {
+    printf("Nhap ma so sinh vien: ");
+    scanf("%s", student->maSoSinhVien);
+    printf("Nhap ho ten sinh vien: ");
+    scanf(" %[^\n]", student->hoTen);
+
+    printf("\nNhap thong tin mon Nhap mon lap trinh:\n");
+    nhapMonHoc(&student->nhapMonLapTrinh);
+
+    printf("\nNhap thong tin mon Toan A1:\n");
+    nhapMonHoc(&student->toanA1);
+
+    printf("\nNhap thong tin mon Toan A2:\n");
+    nhapMonHoc(&student->toanA2);
+
+    printf("\nNhap thong tin mon Vat ly ky thuat:\n");
+    nhapMonHoc(&student->vatLyKyThuat);
+
+    printf("\nNhap thong tin mon Anh van:\n");
+    nhapMonHoc(&student->anhVan);
+
+    // Tính điểm trung bình tích lũy
+    student->diemTrungBinh = tinhDiemTrungBinh(student);
+}
+
+
+
 
 int main() {
     // Khởi tạo một sinh viên mẫu để minh họa
