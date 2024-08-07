@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Chuong2\10">
       <UniqueIdentifier>{e15a082d-76e1-4fe2-b0cc-c7630c312e45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Chuong2\11">
+      <UniqueIdentifier>{ef6405b4-88c1-4931-ba50-74caae49bd37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -68,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="Bai3Dat.cpp">
       <Filter>Source Files\Chuong2\10</Filter>
+    </ClCompile>
+    <ClCompile Include="BaiTap11.cpp">
+      <Filter>Source Files\Chuong2\11</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

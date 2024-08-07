@@ -130,6 +130,7 @@
     <ClCompile Include="Bai1.cpp" />
     <ClCompile Include="Bai2.cpp" />
     <ClCompile Include="Bai3Dat.cpp" />
+    <ClCompile Include="BaiTap11.cpp" />
     <ClCompile Include="chuong3_bai10.cpp" />
     <ClCompile Include="chuong3_bai2.cpp" />
     <ClCompile Include="chuong3_bai3.cpp" />

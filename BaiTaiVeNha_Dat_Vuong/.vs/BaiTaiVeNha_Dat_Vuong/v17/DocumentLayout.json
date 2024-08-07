@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\Bai3Dat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|solutionrelative:BaiTaiVeNha_Dat_Vuong\\Bai3Dat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|solutionrelative:BaiTaiVeNha_Dat_Vuong\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\BaiTap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|solutionrelative:BaiTaiVeNha_Dat_Vuong\\BaiTap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\Bai2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|solutionrelative:BaiTaiVeNha_Dat_Vuong\\Bai2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\BaiTap11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7523F275-0B80-465C-91DB-30E440E906A7}|BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong.vcxproj|solutionrelative:BaiTaiVeNha_Dat_Vuong\\BaiTap11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Bai3Dat.cpp",
-              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\Bai3Dat.cpp",
-              "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\Bai3Dat.cpp",
-              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\Bai3Dat.cpp",
-              "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\Bai3Dat.cpp",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAowBIAAAAjAAAA",
+              "Title": "BaiTap11.cpp",
+              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\BaiTap11.cpp",
+              "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\BaiTap11.cpp",
+              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\BaiTap11.cpp",
+              "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\BaiTap11.cpp",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAowLQAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-07T11:57:00.519Z",
+              "WhenOpened": "2024-08-07T12:33:19.593Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Bai2.cpp",
-              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\Bai2.cpp",
-              "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\Bai2.cpp",
-              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\Bai2.cpp",
-              "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\Bai2.cpp",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAADcBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-05T13:49:44.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BaiTap.h",
-              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\BaiTap.h",
-              "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\BaiTap.h",
-              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\BaiTap.h",
-              "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\BaiTap.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-05T10:31:36.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\main.cpp",
-              "RelativeDocumentMoniker": "BaiTaiVeNha_Dat_Vuong\\main.cpp",
-              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\ly thuyet\\BaiTaiVeNha_Dat_Vuong\\BaiTaiVeNha_Dat_Vuong\\main.cpp",
-              "RelativeToolTip": "BaiTaiVeNha_Dat_Vuong\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-05T03:44:20.183Z"
             }
           ]
         }
