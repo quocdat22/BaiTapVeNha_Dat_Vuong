@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="13.cpp" />
     <ClCompile Include="Bai1.cpp" />
     <ClCompile Include="Bai2.cpp" />
     <ClCompile Include="Bai3Dat.cpp" />
